@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/global.css";
 
 
 // ─── Mock Data (replace with API call using useParams id) ─────────────────────
