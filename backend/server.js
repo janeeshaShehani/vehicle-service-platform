@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const garageRoutes = require("./routes/garageRoutes");
 
 const connectDB = require("./config/db");
 
@@ -12,6 +13,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+
+app.use("/api/garages", garageRoutes);
 
 app.get("/", (req, res) => {
   res.send("API Running");
